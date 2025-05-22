@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Regalos </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h1><span class="gift-icon">🎁</span> Encuesta de Regalos </h1>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <span id="progressText">0% completado</span>
+    </div>
+
+    <table id="giftSurvey">
+        <thead>
+            <tr>
+                <th>Opción de Regalo</th>
+                <th>¿Te gustaría?</th>
+                <th>Razón (si no)</th>
+                <th>💖</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- CATEGORÍA: Accesorios -->
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFD1DC;"><i class="fas fa-ring"></i></div><span>Anillo</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift1" class="toggle-input" checked><label for="gift1" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="1"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="1"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFB6C1;"><i class="fas fa-gem"></i></div><span>Collar</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift2" class="toggle-input" checked><label for="gift2" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="2"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="2"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFCCCC;"><i class="fas fa-circle"></i></div><span>Pulsera</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift3" class="toggle-input" checked><label for="gift3" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="3"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="3"><i class="far fa-heart"></i></button></td>
+            </tr>
+
+            <!-- CATEGORÍA: Belleza -->
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFE4E1;"><i class="fas fa-spray-can"></i></div><span>Perfume</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift4" class="toggle-input" checked><label for="gift4" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="4"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="4"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FADADD;"><i class="fas fa-paint-brush"></i></div><span>Set de brochas</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift5" class="toggle-input" checked><label for="gift5" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="5"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="5"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFDFE3;"><i class="fas fa-air-freshener"></i></div><span>Crema hidratante</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift6" class="toggle-input" checked><label for="gift6" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="6"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="6"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFB6C1;"><i class="fas fa-palette"></i></div><span>Paleta de sombras</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift7" class="toggle-input" checked><label for="gift7" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="7"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="7"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFC0CB;"><i class="fas fa-heart"></i></div><span>Kit de rubores</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift8" class="toggle-input" checked><label for="gift8" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="8"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="8"><i class="far fa-heart"></i></button></td>
+            </tr>
+
+            <!-- CATEGORÍA: Moda -->
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFEFD5;"><i class="fas fa-tshirt"></i></div><span>Camisa</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift9" class="toggle-input" checked><label for="gift9" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="9"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="9"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFEBCD;"><i class="fas fa-user-secret"></i></div><span>Suéter</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift10" class="toggle-input" checked><label for="gift10" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="10"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="10"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFF0F5;"><i class="fas fa-box-open"></i></div><span>Kit de lencería delicada</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift11" class="toggle-input" checked><label for="gift11" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="11"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="11"><i class="far fa-heart"></i></button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="gift-item">
+                        <div class="gift-image" style="background-color:#FFCAD4;">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <span>Brasier encantador</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="gift12" class="toggle-input" checked>
+                        <label for="gift12" class="toggle-label"></label>
+                        <span class="toggle-text">Sí</span>
+                    </div>
+                </td>
+                <td>
+                    <input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="12">
+                    <div class="character-count"><span>0</span>/100</div>
+                </td>
+                <td>
+                    <button class="like-btn" data-gift="12"><i class="far fa-heart"></i></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="gift-item">
+                        <div class="gift-image" style="background-color:#FFDAE9;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>Conjunto íntimo</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="gift13" class="toggle-input" checked>
+                        <label for="gift13" class="toggle-label"></label>
+                        <span class="toggle-text">Sí</span>
+                    </div>
+                </td>
+                <td>
+                    <input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="13">
+                    <div class="character-count"><span>0</span>/100</div>
+                </td>
+                <td>
+                    <button class="like-btn" data-gift="13"><i class="far fa-heart"></i></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="gift-item">
+                        <div class="gift-image" style="background-color:#FDD5EF;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span>Bala rubor</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="gift14" class="toggle-input" checked>
+                        <label for="gift14" class="toggle-label"></label>
+                        <span class="toggle-text">Sí</span>
+                    </div>
+                </td>
+                <td>
+                    <input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="14">
+                    <div class="character-count"><span>0</span>/100</div>
+                </td>
+                <td>
+                    <button class="like-btn" data-gift="14"><i class="far fa-heart"></i></button>
+                </td>
+            </tr>
+
+            <!-- CATEGORÍA: Tecnología / Otros -->
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#D8BFD8;"><i class="fas fa-mobile-alt"></i></div><span>Gadget electrónico</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift15" class="toggle-input" checked><label for="gift15" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="15"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="15"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#E6E6FA;"><i class="fas fa-camera-retro"></i></div><span>Cámara para niños</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift16" class="toggle-input" checked><label for="gift16" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="16"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="16"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFFACD;"><i class="fas fa-utensils"></i></div><span>Comida</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift17" class="toggle-input" checked><label for="gift17" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="17"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="17"><i class="far fa-heart"></i></button></td>
+            </tr>
+            <tr>
+                <td><div class="gift-item"><div class="gift-image" style="background-color:#FFE4E1;"><i class="fas fa-gift"></i></div><span>Peluche tierno</span></div></td>
+                <td><div class="toggle-switch"><input type="checkbox" id="gift18" class="toggle-input" checked><label for="gift18" class="toggle-label"></label><span class="toggle-text">Sí</span></div></td>
+                <td><input type="text" class="reason-input" placeholder="¿Por qué no?" data-gift="18"><div class="character-count"><span>0</span>/100</div></td>
+                <td><button class="like-btn" data-gift="18"><i class="far fa-heart"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn-submit" id="mainSubmitBtn"><i class="fas fa-paper-plane"></i> Enviar Encuesta</button>
+
+    <div class="footer">
+        <p>Gracias por elegir el mejor regalo para ti 💖</p>
+        <div class="confetti-container" id="confetti"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
